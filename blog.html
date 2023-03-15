@@ -28,19 +28,29 @@
 
     <section class="container mx-auto">
         <h1 class="text-center text-4xl font-bold pt-10">ANSWER THE QUESTION</h1>
-        <div class="p-12 pt-14">
+        <div class="p-12 pt-14 leading-7">
+
+
+            <!-- .forEach(), .map(), .filter() and .find()
+            ============================================= -->
+
+
             <h1 class="font-bold text-xl">What's the difference .forEach(), .map(), .filter() and .find() ?</h1>
 
-            <p> <span class="font-bold">.forEach(): </span> The .forEach() method executes a provided function once for each array element. It is useful when you want to loop through an array and perform some operation on each element, without changing the original array. It doesn't return anything, it just executes the provided function on each element of the array.</p><br>
-            <p> <span class="font-bold">.map(): </span>The .map() method creates a new array with the results of calling a provided function on every element in the calling array. It returns a new array with the same length as the original array, but with the modified elements.</p><br>
-            <p> <span class="font-bold">.filter(): </span>The .filter() method creates a new array with all elements that pass the test implemented by the provided function. It returns a new array containing only the elements that meet the condition.</p><br>
-            <p> <span class="font-bold">.find(): </span>.find() is another array method in JavaScript that is similar to .filter(), but it returns only the first element in the array that satisfies a provided testing function, rather than returning a new array with all the elements that pass the test.</p>
+            <p> <span class="font-bold bg-orange-200 px-2 rounded">.forEach(): </span> The .forEach() method executes a provided function once for each array element. It is useful when you want to loop through an array and perform some operation on each element, without changing the original array. It doesn't return anything, it just executes the provided function on each element of the array.</p>
+            <p> <span class="font-bold bg-orange-200 px-2 rounded">.map(): </span>The .map() method creates a new array with the results of calling a provided function on every element in the calling array. It returns a new array with the same length as the original array, but with the modified elements.</p>
+            <p> <span class="font-bold bg-orange-200 px-2 rounded">.filter(): </span>The .filter() method creates a new array with all elements that pass the test implemented by the provided function. It returns a new array containing only the elements that meet the condition.</p>
+            <p> <span class="font-bold bg-orange-200 px-2 rounded">.find(): </span>.find() is another array method in JavaScript that is similar to .filter(), but it returns only the first element in the array that satisfies a provided testing function, rather than returning a new array with all the elements that pass the test.</p>
 
             <br> <br>
             <h1 class="font-bold text-xl">whats the difference browser local Storage, section storage or cookies ?</h1>
-            <p><span class="font-bold">Local storage: </span>Local storage is used to store data in the user's browser indefinitely, while session storage is cleared automatically once the user closes the browser or tab.</p><br>
-            <p><span class="font-bold">Session storage: </span>Session storage is a type of web storage that allows you to store data in the user's browser for the duration of a session, which ends when the user closes the browser or tab.</p><br>
-            <p><span class="font-bold">Cookies: </span>Cookies are small text files that are stored on the user's computer and can be used to store data that needs to persist across sessions.</p>
+            <p><span class="font-bold bg-orange-200 px-2 rounded">Local storage: </span>Local storage is used to store data in the user's browser indefinitely, while session storage is cleared automatically once the user closes the browser or tab.</p>
+            <p><span class="font-bold bg-orange-200 px-2 rounded">Session storage: </span>Session storage is a type of web storage that allows you to store data in the user's browser for the duration of a session, which ends when the user closes the browser or tab.</p>
+            <p><span class="font-bold bg-orange-200 px-2 rounded">Cookies: </span>Cookies are small text files that are stored on the user's computer and can be used to store data that needs to persist across sessions.</p>
+
+
+            <!-- What is event loop 
+            ========================== -->
 
             <br> <br>
             <h1 class="font-bold text-xl">What is event loop ?</h1>
@@ -48,14 +58,19 @@
             <p><span class="font-bold"></span>The event loop is a mechanism in JavaScript that manages the execution of asynchronous code by constantly checking a queue for tasks that are ready to be executed.</p>
             <p>The event loop constantly checks a queue for tasks that are ready to be executed. If there are any, it pulls them off the queue and executes them. This allows JavaScript to handle asynchronous tasks in a non-blocking way, ensuring that the user interface remains responsive and the application remains performant.</p>
 
+
+            <!-- 2 Bonus Function details 
+            ==============================-->
+
+
             <br> <br>
             <h1 class="font-bold text-xl text-center">Function details</h1>
-            <h1 class="font-bold text-xl">quizTimer:</h1>
+            <span class="font-bold bg-orange-200 px-2 rounded">quizTimer:</span>
             <p>একটি ফাংশন রয়েছে যার নাম quizTimer। এই ফাংশন একটি সময় গণনা করে এবং প্রতি সেকেন্ডে একটি এলিমেন্টের বিষয়বস্তু আপডেট করে দেখায়।
                 যদি ফাংশনের dismiss true হয় তবে ফাংশনটি সেট time টি স্থগিত করে return দেয়।
                 যদি dismiss folse হয় তবে ফাংশনটি একটি টাইমার সেট করে দিয়ে প্রতি সেকেন্ডে হিসাব করে সেকেন্ড এবং মিনিটে সময় গণনা করে একটি এলিমেন্টের বিষয়বস্তু আপডেট করে দেখায়। যদি সময় কাউন্ট 60 সেকেন্ড এর বেশি হয় তবে সেকেন্ড টাইমারের রঙ change হয়।</p><br>
 
-            <h1 class="font-bold text-xl">chooseQuiz:</h1>
+            <span class="font-bold bg-orange-200 px-2 rounded">chooseQuiz:</span>
             <p>ফাংশন "chooseQuiz"। এটি দুটি প্যারামিটার গ্রহণ করে - "index" এবং "givenAns"।
                 এই ফাংশন প্রথমে চেক করে অ্যারেতে একই আইডি সহ কোনও উত্তর আছে কিনা। যদি থাকে, তবে সে উত্তর অবজেক্টের "givenAns" প্রপার্টি আপডেট করে। না থাকলে, একটি নতুন উত্তর অবজেক্ট তৈরি করে এবং "quizData" থেকে "index" এবং "givenAns" সহ এবং এটি "উত্তর" অ্যারেতে যুক্ত করে।
                 পরবর্তীতে, এই ফাংশন একটি নামক অন্য ফাংশন কল করে যা বর্তমান উত্তরগুলি দেখানোর জন্য ইউআই আপডেট করে। এই "givenAns" অ্যারেটি একটি আর্গুমেন্ট হিসাবে পাস করে এবং ইউআই এলিমেন্টগুলি আপডেট করে।</p>
